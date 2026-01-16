@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BDmeals | Homemade Goodness, Delivered</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#22C55E",
+                        "background-light": "#FAFAFA",
+                        "background-dark": "#0F172A",
+                        "surface-light": "#FFFFFF",
+                        "surface-dark": "#1E293B",
+                    },
+                    fontFamily: {
+                        display: ["Plus Jakarta Sans", "sans-serif"],
+                        sans: ["Plus Jakarta Sans", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "12px",
+                        'xl': '20px',
+                        '2xl': '32px',
+                    },
+                },
+            },
+        };
+    </script>
+<style>
+        .glass-effect {
+            backdrop-filter: blur(12px);
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+        .dark .glass-effect {
+            background-color: rgba(15, 23, 42, 0.8);
+        }
+        .hero-gradient {
+            background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.2));
+        }
+    </style>
+</head>
+<body class="font-sans bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 transition-colors duration-300">
+<nav class="fixed top-0 w-full z-50 glass-effect border-b border-slate-200 dark:border-slate-800">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-20">
+<div class="flex items-center gap-2">
+<div class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center">
+<span class="material-icons-round text-white">restaurant</span>
+</div>
+<span class="text-2xl font-800 tracking-tight text-slate-900 dark:text-white">BDmeals</span>
+</div>
+<div class="hidden md:flex items-center space-gap-8 gap-8">
+<a class="font-medium text-slate-600 dark:text-slate-300 hover:text-primary transition-colors" href="#">How it Works</a>
+<a class="font-medium text-slate-600 dark:text-slate-300 hover:text-primary transition-colors" href="#">Our Chefs</a>
+<a class="font-medium text-slate-600 dark:text-slate-300 hover:text-primary transition-colors" href="#">Meal Plans</a>
+<div class="h-6 w-[1px] bg-slate-200 dark:bg-slate-700 mx-2"></div>
+<button class="font-semibold text-slate-900 dark:text-white">Login</button>
+<button class="bg-primary text-white px-6 py-2.5 rounded-full font-bold hover:shadow-lg hover:shadow-primary/30 transition-all transform hover:-translate-y-0.5">
+                        Get Started
+                    </button>
+<button class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800" onclick="document.documentElement.classList.toggle('dark')">
+<span class="material-icons-round text-slate-600 dark:text-slate-400">dark_mode</span>
+</button>
+</div>
+</div>
+</div>
+</nav>
+<section class="relative pt-20 overflow-hidden">
+<div class="relative h-[85vh] min-h-[600px] flex items-center">
+<div class="absolute inset-0">
+<img alt="Chef preparing fresh meal" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBw-bcVF9gkDoa6SnBnj0o9LVulwVLNssW431qv1959QguOKvBteTNXuNe6YsXGKgxHHCdBSg3ncDxNAfZTD4dqn7l53h-7IE8GLEoQp-1ctwlMjcNimJIriM4a3qGTmTrJKxiH4yZQddmu3xTDUmaUfEgvWyFoSW1YulwnlqZQaBDc4FnNLsTgcRPAqmGl2XyVAt0waKXIAWM2akD3XZU4DFlCAgeu233i_Z7g8KdElrtdc2lAsCjO0Vem0OZ_ZlYJyhDN6VLNGjfR"/>
+<div class="absolute inset-0 hero-gradient"></div>
+</div>
+<div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+<div class="max-w-2xl text-white space-y-8">
+<div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/20 border border-primary/30 backdrop-blur-md">
+<span class="material-icons-round text-primary text-sm">stars</span>
+<span class="text-sm font-bold tracking-wide uppercase">#1 Homemade Food Platform</span>
+</div>
+<h1 class="text-6xl md:text-7xl font-800 leading-[1.1] tracking-tight">
+                        Homemade goodness, <span class="text-primary">delivered.</span>
+</h1>
+<p class="text-xl text-slate-200 leading-relaxed max-w-lg">
+                        Authentic flavors from verified home chefs. Healthy, fresh, and delivered right to your doorstep.
+                    </p>
+<div class="bg-white dark:bg-surface-dark p-2 rounded-2xl shadow-2xl flex flex-col sm:flex-row gap-2 max-w-xl transition-all hover:scale-[1.01]">
+<div class="flex-1 flex items-center px-4 gap-3">
+<span class="material-icons-round text-slate-400">location_on</span>
+<input class="w-full border-none bg-transparent focus:ring-0 text-slate-900 dark:text-white placeholder:text-slate-400 py-4" placeholder="Enter zip code or area..." type="text"/>
+</div>
+<button class="bg-primary text-white px-8 py-4 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-green-600 transition-colors">
+                            Find Your Plan
+                            <span class="material-icons-round">arrow_forward</span>
+</button>
+</div>
+<div class="flex items-center gap-6 pt-4">
+<div class="flex -space-x-3">
+<img alt="User 1" class="w-10 h-10 rounded-full border-2 border-white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOccXfpzxEGR3Xkz2_H4cPDCOmQQIhz7pkBugrOrwkxNgZf2SCAwB2ZQHXPfYlK9QIdOZrsML4jdK2M0z6LyvxmDFYrXlj8sWPTTX1e2tzDji-UEWtipFw0KbrzKKwRcebHp-ZH0HG2wlKbgVFvZN_gHSljLfkUvysfagAM_ncha277RKbzfTRZ2zFGsd6m8dv1lpWsjNh35oNnUMBOtqw8O3uO9aqHFguZOUTt6eEfhScn9C6aZXDdEKHCoAjPzCgmeJQXqi5Vnbf"/>
+<img alt="User 2" class="w-10 h-10 rounded-full border-2 border-white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDON3WiIVt1vvrlYasU0xjCX5K4EeI9UQ6B6oeLmqJwS6eR0Xc2ezfwJ1e47sBQwMuc3rEXjVYSi2w2y_f2EKCdwMWukKLEQMFTXpGvEeKV06Uj8QiVDKAcGNcQ6L15v211_fQnCbOitDlPGmp8397u4O2iWIbmsnNOOgf-ToOUosiDcZVqz4SwsT5I5c-SqvWLPo8wP7kKn1VZbN5fa0NQUQZQLBWgpbTyhv2bS3dVDwQm09MCNXrPGpzDjjk-SipV9Jiz1cJCuLDt"/>
+<img alt="User 3" class="w-10 h-10 rounded-full border-2 border-white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRo0e8d1EhA-lIyieBy3rq7gWAUCAgNSktwFLF04XQxz2VJ3Q2s0Pbrwf29yK8wbikwfa1MxL89xoAY-O9IFoIV2cOCwjU7LyWzU0RnsxzOm758tlEw3lN3AB8GBXpWWguN_8DGNcKUMnpOn5K8x14xzfiQ82o8Zk4E1vkuYaR3xytx5gzg2r3OkctfbEPhLR-Kisdk_wTMrMQnwvNIjhdqZQi2k_-pfhcL_qrv57X7VRk7pvRtc5De_fKOCk8r3pxSwuGp8qxazGF"/>
+<div class="w-10 h-10 rounded-full border-2 border-white bg-primary flex items-center justify-center text-xs font-bold">10k+</div>
+</div>
+<p class="text-sm text-slate-300">Trusted by over <span class="text-white font-bold">10,000+</span> happy families</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-white dark:bg-surface-dark">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<h2 class="text-4xl font-800 text-slate-900 dark:text-white mb-4">How BDmeals Works</h2>
+<p class="text-slate-500 dark:text-slate-400 max-w-2xl mx-auto mb-16 text-lg">
+                Fresh, home-cooked meals delivered in three simple steps.
+            </p>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="p-8 rounded-3xl border border-slate-100 dark:border-slate-800 bg-background-light dark:bg-background-dark transition-all hover:shadow-xl hover:-translate-y-1">
+<div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+<span class="material-icons-round text-primary text-3xl">event_note</span>
+</div>
+<h3 class="text-xl font-bold mb-4 text-slate-900 dark:text-white">1. Choose Plan</h3>
+<p class="text-slate-600 dark:text-slate-400">Pick a 5, 6, or 7-day meal plan that fits your lifestyle and preferences.</p>
+</div>
+<div class="p-8 rounded-3xl border border-slate-100 dark:border-slate-800 bg-background-light dark:bg-background-dark transition-all hover:shadow-xl hover:-translate-y-1">
+<div class="w-16 h-16 bg-blue-500/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+<span class="material-icons-round text-blue-500 text-3xl">soup_kitchen</span>
+</div>
+<h3 class="text-xl font-bold mb-4 text-slate-900 dark:text-white">2. Chefs Cook</h3>
+<p class="text-slate-600 dark:text-slate-400">Verified home chefs prepare your meals fresh using quality ingredients.</p>
+</div>
+<div class="p-8 rounded-3xl border border-slate-100 dark:border-slate-800 bg-background-light dark:bg-background-dark transition-all hover:shadow-xl hover:-translate-y-1">
+<div class="w-16 h-16 bg-orange-500/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+<span class="material-icons-round text-orange-500 text-3xl">delivery_dining</span>
+</div>
+<h3 class="text-xl font-bold mb-4 text-slate-900 dark:text-white">3. Fast Delivery</h3>
+<p class="text-slate-600 dark:text-slate-400">Your meals are delivered warm and ready to eat right when you need them.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-background-light dark:bg-background-dark">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-end mb-12">
+<div>
+<h2 class="text-4xl font-800 text-slate-900 dark:text-white mb-2">Chefs of the Week</h2>
+<p class="text-slate-500 dark:text-slate-400">Meet the talented hands behind your favorite meals.</p>
+</div>
+<button class="text-primary font-bold flex items-center gap-1 hover:gap-2 transition-all">
+                    View All Chefs <span class="material-icons-round">chevron_right</span>
+</button>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+<div class="bg-white dark:bg-surface-dark p-6 rounded-3xl text-center shadow-sm hover:shadow-md transition-all">
+<div class="relative w-24 h-24 mx-auto mb-4">
+<div class="absolute inset-0 rounded-full border-4 border-primary/20"></div>
+<img alt="Chef Nasrin" class="w-full h-full rounded-full object-cover p-1" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfuWDdNBqOo8PfwAYmylHnJm69HYgQPtW9PnlviRe-L9_7txNzrC-38vxqnhiXlefrSEUZ6TwzYn6ORjD3sFpnF4SvXKIvkBYzxlHAmsknP79QP7p6B_afPtoTkf7icb51NRUp9ojnVDU_yWWd1kO-g21Y1qL_oDGWBze7s465SmbDQj0KPlfV_hTfcYEmvP25MUN6CTqbRnrFvxZNHsjKFNFBzh0lxT3gSyKHu8jq3TD-C-TcRm1KKyJLwA7SaKKpYxNxOAvT6_px"/>
+<div class="absolute -bottom-1 -right-1 bg-white dark:bg-surface-dark shadow-md px-2 py-0.5 rounded-full flex items-center gap-1">
+<span class="material-icons-round text-yellow-400 text-[14px]">star</span>
+<span class="text-[12px] font-bold text-slate-900 dark:text-white">4.9</span>
+</div>
+</div>
+<h4 class="font-bold text-slate-900 dark:text-white">Salma B.</h4>
+<p class="text-sm text-slate-500 dark:text-slate-400 mb-4">Bengali Specialist</p>
+<button class="w-full py-2 rounded-xl border border-slate-100 dark:border-slate-800 text-sm font-semibold hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">View Menu</button>
+</div>
+<div class="bg-white dark:bg-surface-dark p-6 rounded-3xl text-center shadow-sm hover:shadow-md transition-all">
+<div class="relative w-24 h-24 mx-auto mb-4">
+<div class="absolute inset-0 rounded-full border-4 border-primary/20"></div>
+<img alt="Chef Rahat" class="w-full h-full rounded-full object-cover p-1" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrNJSXua_x1LBo9nUXR_H1Sk-JUpJS7UQffeiSvIOlcpwZFzuwnAzDa1_o7sERFNxJW7oUkc8nylQox6PHI_K8E7JwuUM47dn4vKCLwc--Whm5Z2gVfSOgo_Hk7r-a5LP8uRIn1M-BJFukkgsV2COV8JEC7VTMK-lY8jJn5MWYthbilI3btMfkOATtucBk5M_jDNY8enTusurIEoGthJTCmJSO0tHtBModde5Bci0HrQwnTVNSDCKsczqx1h6qHMd6_ZKNrFLBJhf2"/>
+<div class="absolute -bottom-1 -right-1 bg-white dark:bg-surface-dark shadow-md px-2 py-0.5 rounded-full flex items-center gap-1">
+<span class="material-icons-round text-yellow-400 text-[14px]">star</span>
+<span class="text-[12px] font-bold text-slate-900 dark:text-white">4.8</span>
+</div>
+</div>
+<h4 class="font-bold text-slate-900 dark:text-white">Rahat K.</h4>
+<p class="text-sm text-slate-500 dark:text-slate-400 mb-4">Kebab Master</p>
+<button class="w-full py-2 rounded-xl border border-slate-100 dark:border-slate-800 text-sm font-semibold hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">View Menu</button>
+</div>
+<div class="bg-white dark:bg-surface-dark p-6 rounded-3xl text-center shadow-sm hover:shadow-md transition-all">
+<div class="relative w-24 h-24 mx-auto mb-4">
+<div class="absolute inset-0 rounded-full border-4 border-primary/20"></div>
+<img alt="Chef Anika" class="w-full h-full rounded-full object-cover p-1" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-2Iq-n1yIzqV8YdPyYQwlfs1eLFggsYQAzzdtDDF56WclSvTqK8MMHfFKFd0LsnDmPsUPnGYSOHRIBRF95JROXa1lim_BVQIdJJy8mxBrE8FNuI8CDIrzUOFLdUPtDgoop-KMAkOJYdb7n5WxtzvO3vJKDFZq0ioBCLMkxR7lV09d5UFJCaZ8Yzbz12QMv9PHmHntrdcLiio2ijSCFyuMe77L64CYOrG3aTcyA41wS5WUTkUNWGzePm6mpTmEz_Z24G7phRe6CNzp"/>
+<div class="absolute -bottom-1 -right-1 bg-white dark:bg-surface-dark shadow-md px-2 py-0.5 rounded-full flex items-center gap-1">
+<span class="material-icons-round text-yellow-400 text-[14px]">star</span>
+<span class="text-[12px] font-bold text-slate-900 dark:text-white">5.0</span>
+</div>
+</div>
+<h4 class="font-bold text-slate-900 dark:text-white">Anika T.</h4>
+<p class="text-sm text-slate-500 dark:text-slate-400 mb-4">Healthy Meals</p>
+<button class="w-full py-2 rounded-xl border border-slate-100 dark:border-slate-800 text-sm font-semibold hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">View Menu</button>
+</div>
+<div class="bg-white dark:bg-surface-dark p-6 rounded-3xl text-center shadow-sm hover:shadow-md transition-all">
+<div class="relative w-24 h-24 mx-auto mb-4">
+<div class="absolute inset-0 rounded-full border-4 border-primary/20"></div>
+<img alt="Chef Karim" class="w-full h-full rounded-full object-cover p-1" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_vFVGGMPY8fudyELHZ4vfW6R5lknaRj4WlN_FKA51K6NOCWHw0YuW0fl6Ax1byNFA3KhGUDPtJ340NxzD93JEgTJbj4fvcZVGkhibQLzD3APfEkPexvp7ZMM6lCTNjS9U8RVWwws65HHnWnXGkMOWkW9xGk49ZBtxguDUQWCgxQzPe9utua5mIYXo8kByVIC5oKb_jwKM71pzVdotrpi4bkntSau2fKNMNK-yzg1OoNVlbQ8U3zW6GiBZ_9hOkTN4Baw4G6h7IL6Q"/>
+<div class="absolute -bottom-1 -right-1 bg-white dark:bg-surface-dark shadow-md px-2 py-0.5 rounded-full flex items-center gap-1">
+<span class="material-icons-round text-yellow-400 text-[14px]">star</span>
+<span class="text-[12px] font-bold text-slate-900 dark:text-white">4.7</span>
+</div>
+</div>
+<h4 class="font-bold text-slate-900 dark:text-white">Karim J.</h4>
+<p class="text-sm text-slate-500 dark:text-slate-400 mb-4">Rice Specialist</p>
+<button class="w-full py-2 rounded-xl border border-slate-100 dark:border-slate-800 text-sm font-semibold hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">View Menu</button>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-white dark:bg-surface-dark">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<h2 class="text-4xl font-800 text-slate-900 dark:text-white text-center mb-16">Featured Plans</h2>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<div class="bg-background-light dark:bg-background-dark p-8 rounded-[40px] border border-slate-100 dark:border-slate-800 group hover:shadow-2xl transition-all">
+<div class="flex flex-wrap justify-between items-start gap-4 mb-8">
+<div>
+<span class="bg-primary/10 text-primary text-[12px] font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-3 inline-block">Most Popular</span>
+<h3 class="text-3xl font-800 text-slate-900 dark:text-white">5-Day Work Week</h3>
+<div class="flex items-center gap-4 mt-2 text-slate-500 dark:text-slate-400">
+<span class="flex items-center gap-1"><span class="material-icons-round text-sm">calendar_today</span> Sun - Thu</span>
+<span class="flex items-center gap-1 text-primary"><span class="material-icons-round text-sm">check_circle</span> Lunch</span>
+</div>
+</div>
+<div class="text-right">
+<div class="text-4xl font-800 text-primary">৳2,500</div>
+<div class="text-sm text-slate-400 font-medium">/ WEEK</div>
+</div>
+</div>
+<div class="mb-8">
+<div class="flex justify-between items-center mb-4">
+<span class="text-xs font-bold uppercase tracking-widest text-slate-400">Sneak Peek</span>
+<button class="text-xs font-bold text-primary">View Full 7-Day Menu</button>
+</div>
+<div class="grid grid-cols-3 gap-4">
+<div class="space-y-2">
+<div class="aspect-video rounded-2xl overflow-hidden">
+<img alt="Beef Bhuna" class="w-full h-full object-cover group-hover:scale-110 transition-transform" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtBEHPnLE_bphSqgF3fQZBcNSZ1gAn8RFF14XZePM0UUl97WtQk3oObm4Yg_D7u4paOEHdFhBOMMzm_guSfqHDss-VFKYHDlRG1bV7H_lm3FZ1jkY28i1_Fm7f-eIprQQHgqG7yi60zaPNSLZKxrvBJwfyvdjDP373VPqrpbkiStdwZm8RuDmm4EbfGq5MsG13kfrCOs-3IUQt1Dzcp3oIJBBw9I8lVbtDPSImdKauY0pXpW91MPOIBs-3ourSNcvwqf5BZbzIRCVV"/>
+</div>
+<p class="text-[12px] font-bold text-slate-900 dark:text-white">Beef Bhuna</p>
+<p class="text-[10px] text-slate-500 uppercase">Monday</p>
+</div>
+<div class="space-y-2">
+<div class="aspect-video rounded-2xl overflow-hidden">
+<img alt="Chicken Korma" class="w-full h-full object-cover group-hover:scale-110 transition-transform" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdP3srYNmbV3lptKSH-_UHZNrOKfthmdi1AAJINhmDxxcEXRtKEIlvtEmSYwaTa_v2WYhOXuPxOW3hFIC74WXk9PDPd4EMRyREXfdQJegd_JSSXk4m_ShHeRcg6cGZdD_WO9Xp5avNNsqy3qlxXXKG-1gQbMJnCVr2N7H3rlgUNg7glH8MAvcZ5f0SAN7kS_X4-nrQAyzG8R46QxO9pJM0pS92nsjCy5rb2pVrHhzFRPR2oxzcaWv8LOKiamAgTASnunqbDCOkk8kQ"/>
+</div>
+<p class="text-[12px] font-bold text-slate-900 dark:text-white">Chicken Korma</p>
+<p class="text-[10px] text-slate-500 uppercase">Tuesday</p>
+</div>
+<div class="space-y-2">
+<div class="aspect-video rounded-2xl overflow-hidden">
+<img alt="Rui Fish Curry" class="w-full h-full object-cover group-hover:scale-110 transition-transform" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFjnvvSqIXVFZSAr1RImqsWKxI4nUN5mAwmxMJrQaM5k8upqRFW7Ktg9xdSWzWPJKSr5g-scKMewrkpYPOX_kSX2VnNVPG39B37SUm6uMsvX0GYx4GEp8pHHsZXilA9ASFdtncsKZy4n_8F7hmVkJIjY8z0Q1EKUWhcKE_gPbq8mwX7XO05X_zpi7B8x8X_fED2a1WXbiESMVBOKGmOuKrF6XDRvVqcScT7Iql7aKpz4QtMvyA81nt5wh4_VEYXL4yoqf4Lmd134Sv"/>
+</div>
+<p class="text-[12px] font-bold text-slate-900 dark:text-white">Rui Fish Curry</p>
+<p class="text-[10px] text-slate-500 uppercase">Wednesday</p>
+</div>
+</div>
+</div>
+<button class="w-full py-4 rounded-2xl bg-white dark:bg-surface-dark border-2 border-slate-100 dark:border-slate-800 font-bold hover:border-primary hover:text-primary transition-all">
+                        View Full Menu
+                    </button>
+</div>
+<div class="bg-background-light dark:bg-background-dark p-8 rounded-[40px] border border-slate-100 dark:border-slate-800 group hover:shadow-2xl transition-all">
+<div class="flex flex-wrap justify-between items-start gap-4 mb-8">
+<div>
+<span class="bg-blue-500/10 text-blue-500 text-[12px] font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-3 inline-block">Best Value</span>
+<h3 class="text-3xl font-800 text-slate-900 dark:text-white">3-Day Mini Plan</h3>
+<div class="flex items-center gap-4 mt-2 text-slate-500 dark:text-slate-400">
+<span class="flex items-center gap-1"><span class="material-icons-round text-sm">calendar_today</span> Fri - Sun</span>
+<span class="flex items-center gap-1 text-primary"><span class="material-icons-round text-sm">check_circle</span> Dinner</span>
+</div>
+</div>
+<div class="text-right">
+<div class="text-4xl font-800 text-primary">৳1,800</div>
+<div class="text-sm text-slate-400 font-medium">/ WEEK</div>
+</div>
+</div>
+<div class="mb-8">
+<div class="flex justify-between items-center mb-4">
+<span class="text-xs font-bold uppercase tracking-widest text-slate-400">Sneak Peek</span>
+<button class="text-xs font-bold text-primary">View Full Menu</button>
+</div>
+<div class="grid grid-cols-3 gap-4">
+<div class="space-y-2">
+<div class="aspect-video rounded-2xl overflow-hidden">
+<img alt="Special Polao" class="w-full h-full object-cover group-hover:scale-110 transition-transform" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBbKUB4Gr-IuP5LgqEJn-EjmzQESsXk373aWdi8ugr-I_T_qWaT7M3EhxZLNhSOPIt1ClhVj7FGUKsSk0rppnMgfAgLYn4gS9XG0o_XCdnKMBMyxAbrEKqTP7vblE50IVsdqZbSa6nKIgPkHqtCo1Vhl9ahxafvCUn6xzcOm3HpcstKD3S57R_4962RlhgZ040kH2oplGfYQO8dQENDi_Du8vzZVPKbbcUzukyaoV6qawLxSY9F8MDyF7tjzbb69h7J9FfVNKlHE9X"/>
+</div>
+<p class="text-[12px] font-bold text-slate-900 dark:text-white">Special Polao</p>
+<p class="text-[10px] text-slate-500 uppercase">Friday</p>
+</div>
+<div class="space-y-2">
+<div class="aspect-video rounded-2xl overflow-hidden">
+<img alt="Fish Fry" class="w-full h-full object-cover group-hover:scale-110 transition-transform" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFxEe5iB8kplSfSxuXxHadRp2K3_zSWWeqoPGD0x52YthW7t6esiUmGbRKE1TVFouMh_dl6p7qOUIGeHG4P2JGsEDYLZ9KHCSuRiohHKCyA4Z7FJyaxtOZffbQMdeu43Vj7qVh9Y2NPyO1r7_HJs6H6JU5Siv4CSxM2_xDryvkoWjxXjRy-7pbhiRAoE9_7YGSJh8IxKSoMR6PC_W_GARdcA7gSjS_5z5fHzh5eRMY6im1HR3Bd8eA6VR5CVFbU-petlLxh0kZ5_n8"/>
+</div>
+<p class="text-[12px] font-bold text-slate-900 dark:text-white">Fish Fry</p>
+<p class="text-[10px] text-slate-500 uppercase">Saturday</p>
+</div>
+<div class="space-y-2">
+<div class="aspect-video rounded-2xl overflow-hidden">
+<img alt="Chicken Roast" class="w-full h-full object-cover group-hover:scale-110 transition-transform" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBA-BQWnuClzy6Cgpl_x7YlEmxXFIHtsTP9wG3iZy8S7DffedpkojxGovfx6eg2aU7Slnc0o9lOZ9VUoVR79XCd9DaoatNbu-PtKzm1GY5-gRJUKGtnjL0jrDe82xunMOSkiKNDpjY8eDOTIIZ3N6sO1GdkmZkIXXl8gXDFxZgeCZIGv0wAuJQGZCNnjSt9MVWMxwr7G0Z79gsyHzbd3F5f06GeHL18TpzNY6CE9imeewenT7H2LiJXmqvyxm2REq3g8_3G3CY8AR5x"/>
+</div>
+<p class="text-[12px] font-bold text-slate-900 dark:text-white">Chicken Roast</p>
+<p class="text-[10px] text-slate-500 uppercase">Sunday</p>
+</div>
+</div>
+</div>
+<button class="w-full py-4 rounded-2xl bg-white dark:bg-surface-dark border-2 border-slate-100 dark:border-slate-800 font-bold hover:border-primary hover:text-primary transition-all">
+                        View Full Menu
+                    </button>
+</div>
+</div>
+<div class="mt-12 text-center">
+<button class="inline-flex items-center gap-2 bg-primary text-white px-10 py-5 rounded-2xl font-800 text-lg hover:bg-green-600 transition-all shadow-xl shadow-primary/20 hover:scale-[1.02]">
+                    View More Subscriptions
+                    <span class="material-icons-round">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+<section class="py-24 bg-background-light dark:bg-background-dark">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<h2 class="text-4xl font-800 text-slate-900 dark:text-white text-center mb-16">Happy Foodies</h2>
+<div class="max-w-4xl mx-auto bg-white dark:bg-surface-dark p-12 rounded-[40px] shadow-xl relative overflow-hidden">
+<div class="absolute top-0 right-0 p-8 opacity-10">
+<span class="material-icons-round text-8xl text-slate-900 dark:text-white">format_quote</span>
+</div>
+<div class="flex gap-1 mb-8">
+<span class="material-icons-round text-yellow-400">star</span>
+<span class="material-icons-round text-yellow-400">star</span>
+<span class="material-icons-round text-yellow-400">star</span>
+<span class="material-icons-round text-yellow-400">star</span>
+<span class="material-icons-round text-yellow-400">star</span>
+</div>
+<p class="text-2xl font-medium text-slate-800 dark:text-slate-200 leading-relaxed italic mb-12">
+                    "Honestly a lifesaver! The food tastes exactly like my mom's cooking. Packaging is great and always on time. It has completely transformed how I eat during my busy work weeks."
+                </p>
+<div class="flex items-center gap-4">
+<img alt="Sarah Tanvir" class="w-16 h-16 rounded-2xl object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCubyKhZV47afNjPAQnwtg-qfVysu_ARQn9vHfda70DUdIX6pMazAeBWrKd06pcTvZBeHytmE6MbO1sLyEyciUiSLYMUYwxzZ476LYLEMQpkZh8mhOeElqEyPK44_GeBzfoVCCQS35Akcf1ly0qIjnLFlMpNiSFeCCoUGXyUqJ40lPIDmoSCKLEOP-F3J2RKUsEqQplOMnycbtxQwWtkHTlK8AU6PLGYGKmZYReW54KH0ZYCizDBghbB_INXm6qWzdnjbBqq5ubdVzo"/>
+<div>
+<h5 class="text-lg font-bold text-slate-900 dark:text-white">Sarah Tanvir</h5>
+<p class="text-sm text-slate-500 font-medium uppercase tracking-wider">Subscriber Since 2023</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<footer class="bg-slate-900 dark:bg-slate-950 text-slate-400 py-16">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-2 mb-6">
+<div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+<span class="material-icons-round text-white text-sm">restaurant</span>
+</div>
+<span class="text-xl font-800 tracking-tight text-white">BDmeals</span>
+</div>
+<p class="text-sm leading-relaxed mb-6">
+                        Bringing the taste of home to your doorstep. Verified chefs, fresh ingredients, and healthy meal plans.
+                    </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary/20 hover:text-primary transition-all" href="#">
+<span class="material-icons-round text-lg">facebook</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary/20 hover:text-primary transition-all" href="#">
+<span class="material-icons-round text-lg">camera_alt</span>
+</a>
+</div>
+</div>
+<div>
+<h6 class="text-white font-bold mb-6">Quick Links</h6>
+<ul class="space-y-4 text-sm">
+<li><a class="hover:text-primary transition-colors" href="#">How it Works</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Meal Plans</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">All Chefs</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Pricing</a></li>
+</ul>
+</div>
+<div>
+<h6 class="text-white font-bold mb-6">Company</h6>
+<ul class="space-y-4 text-sm">
+<li><a class="hover:text-primary transition-colors" href="#">About Us</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Contact</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+</ul>
+</div>
+<div>
+<h6 class="text-white font-bold mb-6">Join Our Newsletter</h6>
+<p class="text-sm mb-4">Stay updated with our weekly menus and special offers.</p>
+<div class="flex gap-2">
+<input class="bg-white/5 border-white/10 rounded-xl px-4 py-2 w-full focus:ring-primary focus:border-primary text-white text-sm" placeholder="Your email" type="email"/>
+<button class="bg-primary text-white p-2 rounded-xl">
+<span class="material-icons-round">send</span>
+</button>
+</div>
+</div>
+</div>
+<div class="pt-8 border-t border-white/10 text-center text-[12px] uppercase tracking-widest font-bold">
+                © 2024 BDmeals. All rights reserved.
+            </div>
+</div>
+</footer>
+
+</body></html>
