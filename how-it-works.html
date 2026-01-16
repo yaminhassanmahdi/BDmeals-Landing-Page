@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>How BDmeals Works</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#22C55E",
+                        "primary-hover": "#0eb551",
+                        "background-light": "#FAFAFA",
+                        "background-dark": "#0F172A",
+                        "surface-light": "#FFFFFF",
+                        "surface-dark": "#1E293B",
+                        "text-main": "#0d1b13",
+                        "text-muted": "#4c9a6b",
+                        "accent-gold": "#D4AF37",
+                    },
+                    fontFamily: {
+                        display: ["Work Sans", "sans-serif"],
+                        body: ["Work Sans", "sans-serif"],
+                        sans: ["Plus Jakarta Sans", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "12px",
+                        'xl': '20px',
+                        '2xl': '32px',
+                    },
+                },
+            },
+        };
+    </script>
+<style>
+        .glass-effect {
+            backdrop-filter: blur(12px);
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+        .dark .glass-effect {
+            background-color: rgba(15, 23, 42, 0.8);
+        }
+        .hero-gradient {
+            background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.2));
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Smooth scrolling */
+        html { scroll-behavior: smooth; }
+
+        /* Custom scrollbar for better aesthetics */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: #cbd5e1;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body class="font-sans bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 transition-colors duration-300">
+<nav class="fixed top-0 w-full z-50 glass-effect border-b border-slate-200 dark:border-slate-800">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-20">
+<div class="flex items-center gap-2">
+<a href="index.html" class="flex items-center gap-2">
+<div class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center">
+<span class="material-icons-round text-white">restaurant</span>
+</div>
+<span class="text-2xl font-800 tracking-tight text-slate-900 dark:text-white">BDmeals</span>
+</a>
+</div>
+<div class="hidden md:flex items-center space-gap-8 gap-8">
+<a class="font-medium text-primary transition-colors" href="./how-it-works.html">How it Works</a>
+<a class="font-medium text-slate-600 dark:text-slate-300 hover:text-primary transition-colors" href="#">Our Chefs</a>
+<a class="font-medium text-slate-600 dark:text-slate-300 hover:text-primary transition-colors" href="./meal-plans.html">Meal Plans</a>
+<div class="h-6 w-[1px] bg-slate-200 dark:bg-slate-700 mx-2"></div>
+<button class="font-semibold text-slate-900 dark:text-white">Login</button>
+<button class="bg-primary text-white px-6 py-2.5 rounded-full font-bold hover:shadow-lg hover:shadow-primary/30 transition-all transform hover:-translate-y-0.5">
+                        Get Started
+                    </button>
+<button class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800" onclick="document.documentElement.classList.toggle('dark')">
+<span class="material-icons-round text-slate-600 dark:text-slate-400">dark_mode</span>
+</button>
+</div>
+</div>
+</div>
+</nav>
+
+<main class="pt-20 font-display">
+<!-- Hero Section -->
+<section class="relative w-full px-6 py-12 lg:px-20 lg:py-16">
+<div class="mx-auto max-w-7xl">
+<div class="relative overflow-hidden rounded-2xl bg-text-main text-white shadow-xl dark:bg-black/40">
+<!-- Background Image with Overlay -->
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-r from-black/80 to-transparent z-10"></div>
+<img alt="Background showing fresh food" class="h-full w-full object-cover opacity-60" data-alt="Dark aesthetic food photography showing fresh ingredients and prepared meal" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZ6dWCn2OPU81PIds1f4frGdl1_yqSd1LEaGfNXFjWwVBTiZsvLTtPVvmp9i7wqmxnEFhVcnXsW1J8RxQIxN8VsC3eROYCrmlyRH4Xscw8X_RdHZ1Rsv-qt7wjHxd_vSutMOxYuf0cxfwz_628ZVruEMRZzRwGjZCBVC9p1FOPEeXW4GuBYpJj3SnjPfhVosLb_4Vpmfk0v4bRbq7YwZJLNbD_jTqVm5oFY0sQKRc74W9QKUKEICs5Rvq-oPTdF4EKj3kH1fwXvdmP"/>
+</div>
+<div class="relative z-20 flex flex-col items-start justify-center gap-6 p-8 lg:p-16 lg:w-2/3">
+<h1 class="text-4xl font-black leading-tight tracking-tight lg:text-6xl">
+                            The BDmeals <br/> <span class="text-primary">Ecosystem</span>
+</h1>
+<p class="text-lg font-light text-gray-200 lg:text-xl max-w-lg">
+                            Deliciously Simple. Here's how BDmeals brings gourmet food from local chefs directly to your table.
+                        </p>
+<button class="mt-2 flex h-12 items-center justify-center rounded-lg bg-primary px-8 text-base font-bold text-text-main transition-transform hover:scale-105">
+                            Get Started
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Tabs Navigation -->
+<section class="w-full px-6 lg:px-20">
+<div class="mx-auto max-w-7xl">
+<div class="flex w-full flex-col border-b border-[#cfe7d9] dark:border-[#2a4536]">
+<div class="flex gap-8 overflow-x-auto pb-0.5 scrollbar-hide">
+<a class="group relative flex min-w-fit flex-col items-center pb-4 text-center" href="#">
+<span class="mb-1 flex items-center gap-2 text-base font-bold text-text-main dark:text-white">
+<span class="material-symbols-outlined text-primary">person</span>
+                                For Customers
+                            </span>
+<span class="absolute bottom-0 h-1 w-full rounded-t-full bg-primary transition-all"></span>
+</a>
+<a class="group relative flex min-w-fit flex-col items-center pb-4 text-center" href="#">
+<span class="mb-1 flex items-center gap-2 text-base font-medium text-text-muted transition-colors hover:text-text-main dark:hover:text-white">
+<span class="material-symbols-outlined">skillet</span>
+                                For Chefs
+                            </span>
+<span class="absolute bottom-0 h-1 w-0 rounded-t-full bg-primary transition-all group-hover:w-full"></span>
+</a>
+<a class="group relative flex min-w-fit flex-col items-center pb-4 text-center" href="#">
+<span class="mb-1 flex items-center gap-2 text-base font-medium text-text-muted transition-colors hover:text-text-main dark:hover:text-white">
+<span class="material-symbols-outlined">two_wheeler</span>
+                                For Riders
+                            </span>
+<span class="absolute bottom-0 h-1 w-0 rounded-t-full bg-primary transition-all group-hover:w-full"></span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Section Header -->
+<section class="w-full px-6 py-12 lg:px-20">
+<div class="mx-auto max-w-7xl text-center">
+<span class="mb-2 inline-block rounded-full bg-primary/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-primary-hover dark:bg-primary/20">
+                    Step by Step
+                </span>
+<h2 class="text-3xl font-bold tracking-tight text-text-main dark:text-white lg:text-4xl">
+                    Your Journey to Delicious Meals
+                </h2>
+<p class="mx-auto mt-4 max-w-2xl text-text-muted dark:text-gray-400">
+                    We've simplified healthy eating. Follow these four simple steps to get started with your personalized meal plan.
+                </p>
+</div>
+</section>
+<!-- Timeline / Process Section -->
+<section class="w-full px-6 pb-20 lg:px-20">
+<div class="mx-auto max-w-5xl">
+<div class="relative flex flex-col gap-16 lg:gap-24">
+<!-- Central Vertical Line (Desktop Only) -->
+<div class="absolute left-1/2 top-4 hidden h-[calc(100%-2rem)] w-0.5 -translate-x-1/2 bg-gradient-to-b from-primary/10 via-primary/40 to-primary/10 lg:block"></div>
+<!-- Step 1 -->
+<div class="relative flex flex-col items-center gap-8 lg:flex-row">
+<!-- Left: Image -->
+<div class="w-full flex-1 lg:pr-12">
+<div class="group relative aspect-[4/3] overflow-hidden rounded-2xl bg-white shadow-lg ring-1 ring-black/5 transition-transform hover:-translate-y-1 dark:bg-[#1a2e22] dark:ring-white/10">
+<div class="absolute inset-0 bg-gradient-to-tr from-primary/5 to-transparent"></div>
+<img alt="App screen showing meal selection" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Smartphone displaying a food menu selection screen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5kNCuEHfX_oAbHfna2ez4FL1mPTYOpX75ZsJkmxw9TddDk-LKI1GrtXzQTTzOUE6bfk_dlbaT2ODoLUnSSghgxKsREpXeOJ1ueWrzyVTPUfBlsPWeH4cgyjUPiY5gBLdKk9JxD58YV4P2KCMPer8TZgiw4LkLwuA35W6mhkYUPNC45rGVZCvN31T5xe0UQLFmglcKqTf0tQsUUtgRKTy2EHMw5ZLGyd2qfaZ-vqUWkMuT6vJcR8A5lHeD70NNcZtGxXPtBs7mKFEl"/>
+<!-- Floating UI Element Mockup -->
+<div class="absolute bottom-4 left-4 right-4 rounded-lg bg-white/90 p-3 shadow-sm backdrop-blur-sm dark:bg-black/80">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-green-100 p-2 text-green-600">
+<span class="material-symbols-outlined text-xl">check_circle</span>
+</div>
+<div>
+<p class="text-xs font-bold text-text-main dark:text-white">Keto Plan Selected</p>
+<p class="text-[10px] text-gray-500">Weekly subscription active</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Center: Number -->
+<div class="absolute left-1/2 z-10 hidden size-12 -translate-x-1/2 items-center justify-center rounded-full bg-background-light shadow-[0_0_0_8px_rgba(253,252,248,1)] ring-2 ring-primary dark:bg-background-dark dark:shadow-[0_0_0_8px_rgba(16,34,23,1)] lg:flex">
+<span class="font-display text-xl font-bold text-primary">1</span>
+</div>
+<!-- Right: Text -->
+<div class="w-full flex-1 text-center lg:pl-12 lg:text-left">
+<div class="flex flex-col items-center gap-2 lg:items-start">
+<div class="flex size-12 items-center justify-center rounded-xl bg-primary/20 text-primary-hover lg:hidden">
+<span class="font-bold">1</span>
+</div>
+<h3 class="text-2xl font-bold text-text-main dark:text-white">Choose a Plan</h3>
+<p class="text-base leading-relaxed text-text-muted dark:text-gray-400">
+                                    Select from weekly or monthly subscription plans tailored to your specific dietary needs, whether it's Keto, Vegan, or Balanced.
+                                </p>
+</div>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="relative flex flex-col items-center gap-8 lg:flex-row-reverse">
+<!-- Right: Image -->
+<div class="w-full flex-1 lg:pl-12">
+<div class="group relative aspect-[4/3] overflow-hidden rounded-2xl bg-white shadow-lg ring-1 ring-black/5 transition-transform hover:-translate-y-1 dark:bg-[#1a2e22] dark:ring-white/10">
+<div class="absolute inset-0 bg-gradient-to-bl from-accent-gold/5 to-transparent"></div>
+<img alt="Calendar interface" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Close up of a calendar interface on a tablet" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpWFU_KTiEQQ6XDy_ygRiE_fofx5kSxXkK_ovESItNYdFI7rXFldm-CbWAl7JPFoi4Kimx6fTjZ-QmKfgZ7Hneo9LU-fpuCtxuMK_hFL0wvbvTEZsOQgCNuHZPFKnEw_5867CazpEj1A2ppKVsNEoCvlwaHCWZU6QvAcvtE8czSnEL7PvqJrEh8xQ9aKFTo_HY038DwfDsQttmM0cQm6mhFuPc8TITlYh7B4b7J6-IZXLbb447tgpTNV7gLD-jSTWxR686YdkhOur7"/>
+<div class="absolute right-4 top-4 rounded-full bg-accent-gold px-3 py-1 text-xs font-bold text-white shadow-sm">
+                                    Flexible
+                                </div>
+</div>
+</div>
+<!-- Center: Number -->
+<div class="absolute left-1/2 z-10 hidden size-12 -translate-x-1/2 items-center justify-center rounded-full bg-background-light shadow-[0_0_0_8px_rgba(253,252,248,1)] ring-2 ring-primary dark:bg-background-dark dark:shadow-[0_0_0_8px_rgba(16,34,23,1)] lg:flex">
+<span class="font-display text-xl font-bold text-primary">2</span>
+</div>
+<!-- Left: Text -->
+<div class="w-full flex-1 text-center lg:pr-12 lg:text-right">
+<div class="flex flex-col items-center gap-2 lg:items-end">
+<div class="flex size-12 items-center justify-center rounded-xl bg-primary/20 text-primary-hover lg:hidden">
+<span class="font-bold">2</span>
+</div>
+<h3 class="text-2xl font-bold text-text-main dark:text-white">Customize Schedule</h3>
+<p class="text-base leading-relaxed text-text-muted dark:text-gray-400">
+                                    Life happens. Swap meals, skip days, or change delivery slots instantly via the app. You are in full control of your calendar.
+                                </p>
+</div>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="relative flex flex-col items-center gap-8 lg:flex-row">
+<!-- Left: Image -->
+<div class="w-full flex-1 lg:pr-12">
+<div class="group relative aspect-[4/3] overflow-hidden rounded-2xl bg-white shadow-lg ring-1 ring-black/5 transition-transform hover:-translate-y-1 dark:bg-[#1a2e22] dark:ring-white/10">
+<img alt="Chef cooking" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Professional chef plating a gourmet dish with precision" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyoUlcZqVfhadkX69jTBUK9n61dM_SCtR0r1cs-XdH6qPGxm8KVVsf0SNIbkAMeCD89hxS8bGjx4_8mT3jAEXuwtYzeVtzwbsQ677iQINiRGftQRWpgmzYcIhGgvuBz0MSqfw9vdIAcFzz1KnL9Ws5tJwUZEZhBWQ91pnM0xT2EtYFygDSeADgfH3kg0MYT_X5jY2Zx6VzN1aud_S8drktaZ_uAmAv-wiefvVPbp3PpJ21zUgNPP04-R4f54qVQxIXystyoLDo2sdM"/>
+<div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
+<div class="flex items-center gap-2 text-white">
+<span class="material-symbols-outlined text-accent-gold fill-current">star</span>
+<span class="text-sm font-bold">Top Rated Chefs</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Center: Number -->
+<div class="absolute left-1/2 z-10 hidden size-12 -translate-x-1/2 items-center justify-center rounded-full bg-background-light shadow-[0_0_0_8px_rgba(253,252,248,1)] ring-2 ring-primary dark:bg-background-dark dark:shadow-[0_0_0_8px_rgba(16,34,23,1)] lg:flex">
+<span class="font-display text-xl font-bold text-primary">3</span>
+</div>
+<!-- Right: Text -->
+<div class="w-full flex-1 text-center lg:pl-12 lg:text-left">
+<div class="flex flex-col items-center gap-2 lg:items-start">
+<div class="flex size-12 items-center justify-center rounded-xl bg-primary/20 text-primary-hover lg:hidden">
+<span class="font-bold">3</span>
+</div>
+<h3 class="text-2xl font-bold text-text-main dark:text-white">Chef Prepares</h3>
+<p class="text-base leading-relaxed text-text-muted dark:text-gray-400">
+                                    Your order goes to top-rated local chefs who prepare your meal with fresh, locally sourced ingredients right before delivery.
+                                </p>
+</div>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="relative flex flex-col items-center gap-8 lg:flex-row-reverse">
+<!-- Right: Image -->
+<div class="w-full flex-1 lg:pl-12">
+<div class="group relative aspect-[4/3] overflow-hidden rounded-2xl bg-white shadow-lg ring-1 ring-black/5 transition-transform hover:-translate-y-1 dark:bg-[#1a2e22] dark:ring-white/10">
+<img alt="Delivery rider" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Delivery person on scooter with a blurred city background" data-location="Dhaka" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCt5h5CkCJRN9YCoMEOahcGZ-aJleMSglpIlCu8KoWLajJa4TG5Jnt-x7MY05eysAQUYObBhT9vR6JxDUMHQPyxB274oZTKf9LjDAazNZjv2ZgY6q7AAZPZCyDR0JMDS5G78aGQP2vVEj2ppHEdsjvWn-56uYhOwoRk3RXooYEF_W0qAj9oWca_wHNr_DrPUa5sVcvxTwP1rW4tmw1jZ2EP8olnKf7kq91kYwGnWDLJ_UwRWVraH_kPdlijg7r3kjiz76dFQoGabtU5"/>
+<!-- Map overlay mockup -->
+<div class="absolute bottom-4 right-4 h-24 w-24 overflow-hidden rounded-xl border-2 border-white bg-gray-100 shadow-lg dark:border-gray-700">
+<div class="flex h-full w-full items-center justify-center bg-gray-200" data-alt="Abstract map pattern with route line">
+<span class="material-symbols-outlined text-3xl text-primary">location_on</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Center: Number -->
+<div class="absolute left-1/2 z-10 hidden size-12 -translate-x-1/2 items-center justify-center rounded-full bg-background-light shadow-[0_0_0_8px_rgba(253,252,248,1)] ring-2 ring-primary dark:bg-background-dark dark:shadow-[0_0_0_8px_rgba(16,34,23,1)] lg:flex">
+<span class="font-display text-xl font-bold text-primary">4</span>
+</div>
+<!-- Left: Text -->
+<div class="w-full flex-1 text-center lg:pr-12 lg:text-right">
+<div class="flex flex-col items-center gap-2 lg:items-end">
+<div class="flex size-12 items-center justify-center rounded-xl bg-primary/20 text-primary-hover lg:hidden">
+<span class="font-bold">4</span>
+</div>
+<h3 class="text-2xl font-bold text-text-main dark:text-white">Doorstep Delivery</h3>
+<p class="text-base leading-relaxed text-text-muted dark:text-gray-400">
+                                    Track your rider in real-time. Our optimized routes ensure your food arrives hot and on time, every single day.
+                                </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+
+<footer class="bg-slate-900 dark:bg-slate-950 text-slate-400 py-16">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-2 mb-6">
+<div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+<span class="material-icons-round text-white text-sm">restaurant</span>
+</div>
+<span class="text-xl font-800 tracking-tight text-white">BDmeals</span>
+</div>
+<p class="text-sm leading-relaxed mb-6">
+                        Bringing the taste of home to your doorstep. Verified chefs, fresh ingredients, and healthy meal plans.
+                    </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary/20 hover:text-primary transition-all" href="#">
+<span class="material-icons-round text-lg">facebook</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary/20 hover:text-primary transition-all" href="#">
+<span class="material-icons-round text-lg">camera_alt</span>
+</a>
+</div>
+</div>
+<div>
+<h6 class="text-white font-bold mb-6">Quick Links</h6>
+<ul class="space-y-4 text-sm">
+<li><a class="text-primary transition-colors" href="./how-it-works.html">How it Works</a></li>
+<li><a class="hover:text-primary transition-colors" href="./meal-plans.html">Meal Plans</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">All Chefs</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Pricing</a></li>
+</ul>
+</div>
+<div>
+<h6 class="text-white font-bold mb-6">Company</h6>
+<ul class="space-y-4 text-sm">
+<li><a class="hover:text-primary transition-colors" href="#">About Us</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Contact</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+</ul>
+</div>
+<div>
+<h6 class="text-white font-bold mb-6">Join Our Newsletter</h6>
+<p class="text-sm mb-4">Stay updated with our weekly menus and special offers.</p>
+<div class="flex gap-2">
+<input class="bg-white/5 border-white/10 rounded-xl px-4 py-2 w-full focus:ring-primary focus:border-primary text-white text-sm" placeholder="Your email" type="email"/>
+<button class="bg-primary text-white p-2 rounded-xl">
+<span class="material-icons-round">send</span>
+</button>
+</div>
+</div>
+</div>
+<div class="pt-8 border-t border-white/10 text-center text-[12px] uppercase tracking-widest font-bold">
+                © 2024 BDmeals. All rights reserved.
+            </div>
+</div>
+</footer>
+</body></html>
