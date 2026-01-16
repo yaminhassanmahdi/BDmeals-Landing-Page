@@ -51,17 +51,15 @@
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 <div class="flex justify-between items-center h-20">
 <div class="flex items-center gap-2">
-<a href="index.html" class="flex items-center gap-2">
 <div class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center">
 <span class="material-icons-round text-white">restaurant</span>
 </div>
 <span class="text-2xl font-800 tracking-tight text-slate-900 dark:text-white">BDmeals</span>
-</a>
 </div>
 <div class="hidden md:flex items-center space-gap-8 gap-8">
-<a class="font-medium text-slate-600 dark:text-slate-300 hover:text-primary transition-colors" href="./how-it-works.html">How it Works</a>
-<a class="font-medium text-slate-600 dark:text-slate-300 hover:text-primary transition-colors" href="./our-chefs.html">Our Chefs</a>
-<a class="font-medium text-slate-600 dark:text-slate-300 hover:text-primary transition-colors" href="./meal-plans.html">Meal Plans</a>
+<a class="font-medium text-slate-600 dark:text-slate-300 hover:text-primary transition-colors" href="#">How it Works</a>
+<a class="font-medium text-slate-600 dark:text-slate-300 hover:text-primary transition-colors" href="#">Our Chefs</a>
+<a class="font-medium text-slate-600 dark:text-slate-300 hover:text-primary transition-colors" href="#">Meal Plans</a>
 <div class="h-6 w-[1px] bg-slate-200 dark:bg-slate-700 mx-2"></div>
 <button class="font-semibold text-slate-900 dark:text-white">Login</button>
 <button class="bg-primary text-white px-6 py-2.5 rounded-full font-bold hover:shadow-lg hover:shadow-primary/30 transition-all transform hover:-translate-y-0.5">
@@ -71,11 +69,38 @@
 <span class="material-icons-round text-slate-600 dark:text-slate-400">dark_mode</span>
 </button>
 </div>
+<div class="md:hidden flex items-center gap-4">
+    <button class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800" onclick="document.documentElement.classList.toggle('dark')">
+        <span class="material-icons-round text-slate-600 dark:text-slate-400">dark_mode</span>
+    </button>
+    <button id="mobile-menu-btn" class="p-2 text-slate-600 dark:text-slate-300">
+        <span class="material-icons-round text-2xl">menu</span>
+    </button>
 </div>
+</div>
+</div>
+<!-- Mobile Menu Overlay -->
+<div id="mobile-menu" class="fixed inset-0 z-50 bg-slate-900/50 backdrop-blur-sm hidden transition-opacity duration-300 opacity-0">
+    <div class="fixed inset-y-0 right-0 w-64 bg-white dark:bg-slate-900 shadow-xl transform translate-x-full transition-transform duration-300 flex flex-col p-6">
+        <div class="flex justify-between items-center mb-8">
+            <span class="text-xl font-bold dark:text-white">Menu</span>
+            <button id="close-menu-btn" class="p-2 text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full">
+                <span class="material-icons-round">close</span>
+            </button>
+        </div>
+        <div class="flex flex-col gap-6">
+            <a class="text-lg font-medium text-slate-600 dark:text-slate-300 hover:text-primary transition-colors" href="./how-it-works.html">How it Works</a>
+            <a class="text-lg font-medium text-slate-600 dark:text-slate-300 hover:text-primary transition-colors" href="./our-chefs.html">Our Chefs</a>
+            <a class="text-lg font-medium text-slate-600 dark:text-slate-300 hover:text-primary transition-colors" href="./meal-plans.html">Meal Plans</a>
+            <hr class="border-slate-200 dark:border-slate-800">
+            <button class="font-semibold text-slate-900 dark:text-white text-left">Login</button>
+            <button class="bg-primary text-white px-6 py-2.5 rounded-full font-bold hover:shadow-lg shadow-primary/30 transition-all">Get Started</button>
+        </div>
+    </div>
 </div>
 </nav>
 <section class="relative pt-20 overflow-hidden">
-<div class="relative h-[85vh] min-h-[600px] flex items-center">
+<div class="relative h-auto md:h-[85vh] min-h-[500px] md:min-h-[600px] flex items-center py-12 md:py-0">
 <div class="absolute inset-0">
 <img alt="Chef preparing fresh meal" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBw-bcVF9gkDoa6SnBnj0o9LVulwVLNssW431qv1959QguOKvBteTNXuNe6YsXGKgxHHCdBSg3ncDxNAfZTD4dqn7l53h-7IE8GLEoQp-1ctwlMjcNimJIriM4a3qGTmTrJKxiH4yZQddmu3xTDUmaUfEgvWyFoSW1YulwnlqZQaBDc4FnNLsTgcRPAqmGl2XyVAt0waKXIAWM2akD3XZU4DFlCAgeu233i_Z7g8KdElrtdc2lAsCjO0Vem0OZ_ZlYJyhDN6VLNGjfR"/>
 <div class="absolute inset-0 hero-gradient"></div>
@@ -86,7 +111,7 @@
 <span class="material-icons-round text-primary text-sm">stars</span>
 <span class="text-sm font-bold tracking-wide uppercase">#1 Homemade Food Platform</span>
 </div>
-<h1 class="text-6xl md:text-7xl font-800 leading-[1.1] tracking-tight">
+<h1 class="text-4xl md:text-6xl lg:text-7xl font-800 leading-[1.1] tracking-tight">
                         Homemade goodness, <span class="text-primary">delivered.</span>
 </h1>
 <p class="text-xl text-slate-200 leading-relaxed max-w-lg">
@@ -374,9 +399,9 @@
 <div>
 <h6 class="text-white font-bold mb-6">Quick Links</h6>
 <ul class="space-y-4 text-sm">
-<li><a class="hover:text-primary transition-colors" href="./how-it-works.html">How it Works</a></li>
-<li><a class="hover:text-primary transition-colors" href="./meal-plans.html">Meal Plans</a></li>
-<li><a class="hover:text-primary transition-colors" href="./our-chefs.html">All Chefs</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">How it Works</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Meal Plans</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">All Chefs</a></li>
 <li><a class="hover:text-primary transition-colors" href="#">Pricing</a></li>
 </ul>
 </div>
@@ -406,4 +431,33 @@
 </div>
 </footer>
 
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const closeMenuBtn = document.getElementById('close-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuContent = mobileMenu.querySelector('div');
+
+        function toggleMenu() {
+            const isHidden = mobileMenu.classList.contains('hidden');
+            if (isHidden) {
+                mobileMenu.classList.remove('hidden');
+                setTimeout(() => {
+                    mobileMenu.classList.remove('opacity-0');
+                    mobileMenuContent.classList.remove('translate-x-full');
+                }, 10);
+            } else {
+                mobileMenu.classList.add('opacity-0');
+                mobileMenuContent.classList.add('translate-x-full');
+                setTimeout(() => {
+                    mobileMenu.classList.add('hidden');
+                }, 300);
+            }
+        }
+
+        if (mobileMenuBtn) mobileMenuBtn.addEventListener('click', toggleMenu);
+        if (closeMenuBtn) closeMenuBtn.addEventListener('click', toggleMenu);
+        if (mobileMenu) mobileMenu.addEventListener('click', (e) => {
+            if (e.target === mobileMenu) toggleMenu();
+        });
+    </script>
 </body></html>
